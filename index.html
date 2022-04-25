@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://kit.fontawesome.com/4560e98ce8.js" crossorigin="anonymous"></script>
+  <script defer src="./main.js"></script>
+  <title>자기소개김은경</title>
+</head>
+<body>
+  <!-- 그리드 -->
+  <div id="wrapper">
+    <!-- 박스1 -->
+    <div class="box box1">
+      <div class="box1element">
+        <ul class="shortcut">
+          <li class="shortlist"><button class="list" id="toprofile" >Profile</button></li>
+          <li class="shortlist"><button class="list" id="tofavthings">Fav Things To Do</button></li>
+          <li class="shortlist"><button class="list" id="tombti">MBTI</button></li>
+          <li class="shortlist"><button class="list" id="tofunfacts">Fun Facts About Me</button></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 박스2 -->
+    <div class="box box2"></div>
+    <!-- 박스3 -->
+    <div class="box box3">
+      <div class="gallery">
+        <!-- 첫 번째 페이지 -->
+        <div id="intro" class="part">
+          <div class="textmedal">
+            <div class="front">
+              <h1 class="comment">Hello World!<br>This is Eun Kyeong</h1>
+            </div>
+            <div class="back">
+              <h1 class="comment">Welcome!<br>Scroll Down To Meet Me<br>↓</h1>
+            </div>
+          </div>      
+        </div>
+        <!-- 두 번째 페이지 -->
+        <div id="profile" class="part">
+          <div>Profile</div>
+          <div class="selfpic">
+            <img src="./images/vancouver.JPG" alt="mypic"> 
+          </div>
+          <div>
+            <p>이름: 김은경</p>
+            <p>거주지 : 경기도 성남시</p>
+            <p>취향: <span>#커피 #운동 #여름 #바다 #산 #영화 #음악 #반려동물<span></p>
+            <p>관심분야: 프런트 엔드</p>
+          </div>
+        </div>
+        <!-- 세 번째 페이지 -->
+        <div id="fav" class="part">
+          <div>Favorite Things</div>
+          <div>
+            <ul class="favoriteicon">
+              <li class="hobbyicon"><i class="fa-solid fa-person-biking faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Working out</p></li>              
+              <li class="hobbyicon"><i class="fa-solid fa-clapperboard faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Watching Movie</p></li>
+              <li class="hobbyicon"><i class="fa-solid fa-headphones-simple faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Listening to music</p></li>
+              <li class="hobbyicon"><i class="fa-solid fa-kitchen-set faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Cooking</p></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 네 번째 페이지 -->
+        <div id="mbti" class="part">
+          <div>MBTI</div>
+          <div class="enfj">
+            <div>E N F J<br><small style="font-size: 30px;">정의로운 사회운동가</small></div>
+          </div>
+          <img src="./images/enfj.png" alt="enfj">
+        </div>
+        <!-- 다섯 번째 페이지 -->
+        <div id="funfact1" class="part">
+          <div>Fun Facts About Me</div>
+          <i class="fa-brands fa-canadian-maple-leaf"></i>
+          <div>Guess The Fact!</div>
+          <ul class="questions">
+            <!-- 오답및 정답을 alert 창으로 알리기 -->
+            <li><button onclick="javascript:wrong()" class="options">1. My mother is Canadian</button></li>
+            <li><button onclick="javascript:wrong()" class="options">2. My father is Canadian</button></li>
+            <li><button onclick="javascript:right()" class="options">3. I am a permanent resident of Canada</button></li>
+            <li><button onclick="javascript:wrong()" class="options">4. I have a bachelor's degree in Sports Sciences in Canada</button></li>
+          </ul>
+        </div>
+        <!-- 여섯 번째 페이지 -->
+        <div id="funfact2" class="part">
+          <div>Fun Facts About Me</div>
+          <i class="fa-solid fa-hand-peace"></i>
+          <div>Guess The Fact!</div>
+          <ul class="questions2">
+            <!-- 오답및 정답을 alert 창으로 알리기 -->
+            <li><button onclick="javascript:wrong()" class="options">1. I'd done The Miracle Morning 30 Day Challenge</button></li>
+            <li><button onclick="javascript:right()" class="options">2. I had plant-based diet for a year</button></li>
+            <li><button onclick="javascript:wrong()" class="options">3. I've lost 15kg of my weight in a month</button></li>
+            <li><button onclick="javascript:wrong()" class="options">4. I have just finished master's degree in Nutritions</button></li>
+          </ul>
+        </div>
+        <!-- 일곱 번째 페이지 -->
+        <div id="thx" class="part">
+          <div>Thank you for visiting my <br>self-introduction page</div>
+        </div>
+        <!-- 갤러리마지막페이지 -->
+        <div id="final" class="part">
+          <div class="backtotop">GO BACK TO THE TOP</div>
+          <button id="backtotopbtn">
+            <i id="icontotop" class="fa-solid fa-angles-up"></i>
+          </button>
+        </div>
+      </div>
+      <div>
+        <!-- 연락처 stil in box3 -->
+        <ul class="socialmedia">
+          <li class="contactme" id="insta">
+            <a href="https://www.instagram.com/vvjoahvv/" target="_blank" title="@vvjoahvv"><i class="fa-brands fa-instagram icon"></i></a>
+          </li>
+          <li class="contactme" id="call" title="call this number">
+            <a href="tel:01030324318"><i class="fa-solid fa-phone icon"></i></a>
+          </li>
+          <li class="contactme" id="email" title="send an email">
+            <a href="mailto:kimek4319@gmail.com"><i class="fa-solid fa-envelope icon"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 박스4 -->
+    <div class="box box4"></div>
+  </div>
+</body>
+</html>

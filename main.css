@@ -1,0 +1,423 @@
+
+* {
+  margin: 0;
+}
+
+/* 스크롤 */
+.gallery::-webkit-scrollbar {
+  width: 15px;               /* width of the entire scrollbar */
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: black;        /* color of the tracking area */
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #bba14f;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid black; /* creates padding around scroll thumb */
+}
+.gallery::-webkit-scrollbar-thumb:active {
+  background-color: #dec057;    /* color of the scroll thumb */
+}
+
+
+/* 그리드 */
+#wrapper {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 20vh);
+  grid-template-areas:
+    "box1 box1 box1 box1 box1"
+    "box2 box3 box3 box3 box4"
+    "box2 box3 box3 box3 box4"
+    "box2 box3 box3 box3 box4"
+    "box2 box3 box3 box3 box4";
+}
+/* 박스1 */
+.box1 {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  grid-area: box1;
+}
+/* 스크롤로 빨리 이동하기 */
+.box1element {
+  width: 50%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.shortcut {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  text-align: flex-end;
+  list-style: none;
+}
+.shortlist {
+  float: left;
+  margin: 0px auto;
+}
+.list {
+  border: none;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+  font-size: 20px;
+  color: #bba14f;
+}
+.list:hover {
+  color: wheat;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 박스2 */
+.box2 {
+  background-color: black;
+  grid-area: box2;
+  /* padding: 20px 5px; */
+}
+
+/* 메달 */
+.comment {
+  color: #5f4e12;
+  text-align: center;
+  line-height: 2em;
+  font-size: 50px;
+  margin-top: 120px;
+  text-shadow: 5px 2px 2px #e6cf80;
+}
+.textmedal {
+  perspective: 700px;
+  display: flex;
+  justify-content: center;
+}
+.front, .back{
+  position: absolute;
+  backface-visibility: hidden;
+  transition: .7s;
+}
+.front {
+  transform: rotateY(0deg)
+}
+.textmedal:hover .front{
+  transform: rotateY(180deg)
+}
+.back {
+  transform: rotateY(-180deg)
+}
+.textmedal:hover .back{
+  transform: rotateY(0deg)
+}
+
+/* 박스3 */
+.box3 {
+  background-color: black;
+  grid-area: box3;
+}
+
+/* 갤러리 */
+.box3 .gallery {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  background-color: black;
+}
+.box3 .gallery .part {
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  position: sticky;
+  top: 0;
+  line-height: 100%;
+  /* font-size: 50px; */
+  background-color: black;
+}
+.box3 .gallery #intro {
+  background-color: #d6b02e;
+  /* 위에 메달 참고하기 */
+}
+
+/* 기본정보 */
+.box3 .gallery #profile {
+  background-color: #b19122;
+  display: flex;
+}
+#profile>div:first-child{
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  left: 42%;
+  margin-bottom: 15px;
+  color: #5f4e12;
+  text-shadow: 5px 2px 2px #e6cf80;
+}
+#profile>div:last-child{
+  font-size: 15px;
+  font-weight: bold;
+  color: #362c0a;
+  line-height: 3.5em;
+  margin: 150px 30px 0px 50px;
+
+}
+.selfpic {
+  padding-top: 100px;
+}
+.selfpic img {
+  width: 220px;
+  height: 300px;
+  box-sizing: border-box;
+  border: 3px solid #5f4e12;
+  border-radius: 15px;
+  margin-left: 120px;
+}
+
+/* 취미 */
+.box3 .gallery #fav {
+  background-color: #88701a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fav>div:first-child{
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  left: 33%;
+  margin-bottom: 15px;
+  color: #eedfa9;
+  text-shadow: 5px 2px 2px #5f4e12;
+}
+.favoriteicon {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  margin-top: 20px;
+}
+.hobbyicon {
+  float: left;
+  margin: 0px auto;
+}
+.faicon {
+  font-size: 110px;
+  color: #e6cf80;
+  margin: 0px 35px;
+  transition: .3s;
+}
+.favoriteicon .faicon:hover {
+  color: #0d0b02;
+}
+
+/* mbti */
+.box3 .gallery #mbti {
+  background-color: #5f4e12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mbti>div:first-child{
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  left: 44%;
+  margin-bottom: 15px;
+  color: #eedfa9;
+  text-shadow: 5px 2px 2px #362c0a;
+}
+.enfj {
+  position: absolute;
+  left: 310px;
+  top: 180px;
+  color: #eedfa9;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1em;
+  text-shadow: 3px 1px 1px #362c0a;
+  z-index: 2;
+}
+#mbti img {
+  width: 700px;
+  height: 250px;
+  opacity: 0.3;
+}
+
+/* funfactaboutme */
+/* part1 */
+.box3 .gallery #funfact1  {
+  background-color: #362c0a;
+  display: flex;
+  align-items: flex-end;
+}
+#funfact1 div{
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  left: 29%;
+  margin-bottom: 15px;
+  color: #eedfa9;
+  text-shadow: 5px 2px 2px #88701a;
+}
+#funfact1 div:nth-child(3) {
+  top: 90px;
+  left: 38%;
+  font-size: 25px;
+}
+#funfact1 i {
+  color: #EF3340;
+  font-size: 180px;
+  position: absolute;
+  top: 120px;
+  left: 350px;
+}
+.questions {
+  list-style: none;
+  margin: 10px 0;
+}
+.questions .options {
+  margin-bottom: 15px;
+  margin-left: 150px;
+  color: white;
+  float: left;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: #362c0a;
+  border: none;
+}
+.questions .options:hover {
+  color: #EF3340;
+  font-weight: bold;
+}
+
+
+/* part2 */
+.box3 .gallery #funfact2 {
+  background-color: #362c0a;
+  display: flex;
+  align-items: flex-end;
+}
+#funfact2 div{
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  left: 29%;
+  margin-bottom: 15px;
+  color: #eedfa9;
+  text-shadow: 5px 2px 2px #88701a;
+}
+#funfact2 div:nth-child(3) {
+  top: 90px;
+  left: 38%;
+  font-size: 25px;
+}
+#funfact2 i {
+  color: #A7D930;
+  font-size: 150px;
+  position: absolute;
+  top: 150px;
+  left: 370px;
+}
+.questions2 {
+  list-style: none;
+  margin: 10px 0;
+}
+.questions2 .options {
+  margin-bottom: 15px;
+  margin-left: 150px;
+  color: white;
+  float: left;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: #362c0a;
+  border: none;
+}
+.questions2 .options:hover {
+  color: #A7D930;
+  font-weight: bold;
+}
+
+/* 마지막 */
+.box3 .gallery #thx {
+  background-color: #0d0b02;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#thx>div {
+  font-size: 50px;
+  font-weight: bold;
+  color: #bba14f;
+  line-height: 2em;
+  text-align: center;
+}
+
+/* 위로가기마지막 페이지 */
+.box3 .gallery #final {
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#final>.backtotop{
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #bba14f;
+}
+
+#backtotopbtn {
+  border: none;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+  font-size: 70px;
+  color: #bba14f;
+  position: absolute;
+  bottom: 30%;
+  left: 46%;
+}
+
+/* 갤러리끝 박스4시작 */
+.box4 {
+  background-color: black;
+  grid-area: box4;
+}
+
+/* 소셜미디아 */
+.socialmedia {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  margin-top: 20px;
+}
+.contactme {
+  float: left;
+  margin: 0px auto;
+}
+.icon {
+  font-size: 20px;
+  color: #bba14f;
+}
+.icon:hover {
+  color: wheat;
+  font-weight: bold;
+}
+
