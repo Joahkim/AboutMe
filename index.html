@@ -24,7 +24,17 @@
       </div>
     </div>
     <!-- 박스2 -->
-    <div class="box box2"></div>
+    <!-- 다크모드와 라이트모드 -->
+    <div class="box box2">
+      <div>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </div>
     <!-- 박스3 -->
     <div class="box box3">
       <div class="gallery">
@@ -32,11 +42,12 @@
         <div id="intro" class="part">
           <div class="textmedal">
             <div class="front">
-              <h1 class="comment">Hello World!<br>This is Eun Kyeong</h1>
+              <!-- 타이핑으로 내용은 js에 있음 -->
+              <h1 class="comment typing"></h1>
             </div>
-            <div class="back">
+            <!-- <div class="back">
               <h1 class="comment">Welcome!<br>Scroll Down To Meet Me<br>↓</h1>
-            </div>
+            </div> -->
           </div>      
         </div>
         <!-- 두 번째 페이지 -->
@@ -79,10 +90,10 @@
           <div>Guess The Fact!</div>
           <ul class="questions">
             <!-- 오답및 정답을 alert 창으로 알리기 -->
-            <li><button onclick="javascript:wrong()" class="options">1. My mother is Canadian</button></li>
-            <li><button onclick="javascript:wrong()" class="options">2. My father is Canadian</button></li>
-            <li><button onclick="javascript:right()" class="options">3. I am a permanent resident of Canada</button></li>
-            <li><button onclick="javascript:wrong()" class="options">4. I have a bachelor's degree in Sports Sciences in Canada</button></li>
+            <li><button class="options wrong">1. My mother is Canadian</button></li>
+            <li><button class="options wrong">2. My father is Canadian</button></li>
+            <li><button class="options right" >3. I am a permanent resident of Canada</button></li>
+            <li><button class="options wrong">4. I have a bachelor's degree in Sports Sciences in Canada</button></li>
           </ul>
         </div>
         <!-- 여섯 번째 페이지 -->
@@ -92,10 +103,10 @@
           <div>Guess The Fact!</div>
           <ul class="questions2">
             <!-- 오답및 정답을 alert 창으로 알리기 -->
-            <li><button onclick="javascript:wrong()" class="options">1. I'd done The Miracle Morning 30 Day Challenge</button></li>
-            <li><button onclick="javascript:right()" class="options">2. I had plant-based diet for a year</button></li>
-            <li><button onclick="javascript:wrong()" class="options">3. I've lost 15kg of my weight in a month</button></li>
-            <li><button onclick="javascript:wrong()" class="options">4. I have just finished master's degree in Nutritions</button></li>
+            <li><button class="options wrong">1. I'd done The Miracle Morning 30 Day Challenge</button></li>
+            <li><button class="options right">2. I had plant-based diet for a year</button></li>
+            <li><button class="options wrong">3. I've lost 15kg of my weight in a month</button></li>
+            <li><button class="options wrong">4. I have just finished master's degree in Nutritions</button></li>
           </ul>
         </div>
         <!-- 일곱 번째 페이지 -->

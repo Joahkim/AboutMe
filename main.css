@@ -1,24 +1,27 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
+
 
 /* 스크롤 */
 .gallery::-webkit-scrollbar {
-  width: 15px;               /* width of the entire scrollbar */
+  width: 8px;
+  background: transparent;  
 }
-
-.gallery::-webkit-scrollbar-track {
-  background: black;        /* color of the tracking area */
-}
-
 .gallery::-webkit-scrollbar-thumb {
-  background-color: #bba14f;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid black; /* creates padding around scroll thumb */
+  background-color: #dec057;    
+  border-radius: 10px;      
+  border: 1px solid black
+}
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #dec057;    
+  border-radius: 10px;      
+  border: 1px solid black
 }
 .gallery::-webkit-scrollbar-thumb:active {
-  background-color: #dec057;    /* color of the scroll thumb */
+  background-color: #88701a;    
 }
 
 
@@ -35,6 +38,14 @@
     "box2 box3 box3 box3 box4"
     "box2 box3 box3 box3 box4";
 }
+.box {
+  transition: background-color 0.2s linear;
+}
+.box.light {
+  background-color: white;
+}
+
+
 /* 박스1 */
 .box1 {
   background-color: black;
@@ -67,18 +78,76 @@
   cursor: pointer;
   font-size: 20px;
   color: #bba14f;
+  transition: background-color 0.2s linear;
+}
+.list.light {
+  background-color: white;
+  color: #5f4e12;
 }
 .list:hover {
   color: wheat;
-  font-size: 18px;
   font-weight: bold;
 }
+.list.light:hover {
+  color: #362c0a;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 
 /* 박스2 */
+/* 다크모드와 라이트모드 */
 .box2 {
   background-color: black;
   grid-area: box2;
-  /* padding: 20px 5px; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: 20px;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.label{
+  background-color: #eedfa9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 5px;
+  border-radius: 50px;
+  height: 50px;
+  width: 26px;
+}
+.label.light {
+  background-color: #bba14f;
+}
+.ball {
+  background-color: #362c0a;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s linear;
+}
+/* +는 인접형제 선택자 */
+.checkbox:checked + .label .ball {
+  transform: translateY(24px);
+  background-color: white;
+}
+.fa-moon {
+  color: #362c0a;
+}
+.fa-sun {
+  color: #362c0a;
+}
+.fa-sun.light {
+  transition: color 0.2s linear;
+  color: white;
 }
 
 /* 메달 */
@@ -87,7 +156,7 @@
   text-align: center;
   line-height: 2em;
   font-size: 50px;
-  margin-top: 120px;
+  margin-top: 90px;
   text-shadow: 5px 2px 2px #e6cf80;
 }
 .textmedal {
@@ -97,13 +166,13 @@
 }
 .front, .back{
   position: absolute;
-  backface-visibility: hidden;
-  transition: .7s;
+  /* backface-visibility: hidden;
+  transition: .7s; */
 }
-.front {
+/* .front {
   transform: rotateY(0deg)
-}
-.textmedal:hover .front{
+} */
+/* .textmedal:hover .front{
   transform: rotateY(180deg)
 }
 .back {
@@ -111,14 +180,14 @@
 }
 .textmedal:hover .back{
   transform: rotateY(0deg)
-}
+} */
+
 
 /* 박스3 */
 .box3 {
   background-color: black;
   grid-area: box3;
 }
-
 /* 갤러리 */
 .box3 .gallery {
   height: 70vh;
@@ -126,7 +195,6 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
-  background-color: black;
 }
 .box3 .gallery .part {
   height: 100%;
@@ -143,6 +211,7 @@
   background-color: #d6b02e;
   /* 위에 메달 참고하기 */
 }
+
 
 /* 기본정보 */
 .box3 .gallery #profile {
@@ -178,6 +247,7 @@
   border-radius: 15px;
   margin-left: 120px;
 }
+
 
 /* 취미 */
 .box3 .gallery #fav {
@@ -218,6 +288,7 @@
   color: #0d0b02;
 }
 
+
 /* mbti */
 .box3 .gallery #mbti {
   background-color: #5f4e12;
@@ -252,6 +323,7 @@
   height: 250px;
   opacity: 0.3;
 }
+
 
 /* funfactaboutme */
 /* part1 */
@@ -351,6 +423,7 @@
   font-weight: bold;
 }
 
+
 /* 마지막 */
 .box3 .gallery #thx {
   background-color: #0d0b02;
@@ -365,6 +438,7 @@
   line-height: 2em;
   text-align: center;
 }
+
 
 /* 위로가기마지막 페이지 */
 .box3 .gallery #final {
@@ -393,12 +467,12 @@
   left: 46%;
 }
 
+
 /* 갤러리끝 박스4시작 */
 .box4 {
   background-color: black;
   grid-area: box4;
 }
-
 /* 소셜미디아 */
 .socialmedia {
   padding: 0px;
@@ -415,9 +489,18 @@
 .icon {
   font-size: 20px;
   color: #bba14f;
+  transition: color 0.2s linear;
+}
+.icon.light {
+  font-size: 20px;
+  color: #5f4e12;
 }
 .icon:hover {
   color: wheat;
+  font-weight: bold;
+}
+.icon.light:hover {
+  color: #362c0a;
   font-weight: bold;
 }
 
