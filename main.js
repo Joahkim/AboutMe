@@ -1,36 +1,16 @@
-//지름길과 back to the top버튼
-// const goHere = function(subject,location){subject.addEventListener("click",function scrollToTop(){
-//   galleryTop.scrollTo({
-//     top: location,
-//     behavior: "smooth"
-//   })
-// })
-// };
-// const galleryTop = document.querySelector(".gallery")
-// const toTheIntro = document.querySelector("#toprofile");
-// const toTheFav = document.querySelector("#tofavthings");
-// const toTheMbti = document.querySelector("#tombti");
-// const toTheFunFacts = document.querySelector("#tofunfacts");
-// const toTheTop = document.querySelector("#backtotopbtn");
-
-// goHere(toTheIntro, 500);
-// goHere(toTheFav, 1000);
-// goHere(toTheMbti, 1500);
-// goHere(toTheFunFacts, 2000);
-// goHere(toTheTop, 0);
-
-
-//상웅님의 코드
+//지름길 버튼
 const galleryTop = document.querySelector(".gallery")
 const toTheIntro = document.querySelector("#toprofile");
 const toTheFav = document.querySelector("#tofavthings");
-const toTheMbti = document.querySelector("#tombti");
+const toTheExperience = document.querySelector("#toexperience");
 const toTheFunFacts = document.querySelector("#tofunfacts");
+const toTheContact = document.querySelector("#contactinfo")
 const toTheTop = document.querySelector("#backtotopbtn");
+const pushHome = document.querySelector("#home")
 
 
 const height = galleryTop.clientHeight;
-const navList = [toTheIntro, toTheFav, toTheMbti, toTheFunFacts, toTheTop];
+const navList = [pushHome, toTheIntro, toTheFav, toTheExperience, toTheFunFacts, toTheContact, toTheTop];
 
 function goHere(subject, location) {
   subject.addEventListener("click", function scrollToTop(){
@@ -43,8 +23,8 @@ function goHere(subject, location) {
 
 function moveToPage(){
   for(let i = 0; i < navList.length; i++){
-    goHere(navList[i], height * (i + 1));
-    if (i === 4) {
+    goHere(navList[i], height * i);
+    if (i === 0 || i === 6) {
       goHere(navList[i], 0)
     }
   }
@@ -63,7 +43,10 @@ moveToPage();
  })*/
 
 
-//querySelectorAll로 alert 창 표시하기
+
+
+
+//querySelectorAll로 퀴즈 alert 창 표시하기
 const wrong = document.querySelectorAll('.wrong')
 wrong.forEach(el => el.addEventListener("click", function(){
   alert("hmmm, Try It Again!\n흠...아닙니다!")
@@ -89,7 +72,7 @@ right.forEach(el => el.addEventListener("click", function(){
 
 
 //typing 효과 내기
-const content = "Hello World, \n This is Eun Kyeong \n ↓Scroll Down↓";
+const content = "Hello World, \n Welcome To My Web \n Please Scroll Down To Surf \n🏄";
 const comment = document.querySelector(".typing");
 let i = 0;
 
@@ -104,9 +87,11 @@ let interval = setInterval(typing, 100)
 
 
 
+
+
 //ligth or dark mode
 const checkbox = document.getElementById("checkbox");
-const boxes = document.querySelectorAll(".box, .list, .icon, .label, .fa-sun")
+const boxes = document.querySelectorAll(".box, .list, .icon, .label, .fa-sun, .part, .line, .options, .fa-canadian-maple-leaf, .fa-hand-peace, .article, .profile_textbox")
 checkbox.addEventListener('change',()=>
   //변화요소 넣기
 	boxes.forEach((el)=>el.classList.toggle('light'))
@@ -115,3 +100,44 @@ checkbox.addEventListener('change',()=>
 
 
 
+//슬라이드
+let currentImg = 0;
+let positionValue = 0;
+const IMAGE_WIDTH =  594;
+
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const innerEls = document.querySelectorAll(".inner_el");
+
+
+function next(){
+  if(currentImg < 7){
+    prevBtn.removeAttribute('disabled')
+    positionValue -= IMAGE_WIDTH;
+    innerEls.forEach((el)=>el.style.transform = `translateX(${positionValue}px)`)
+    currentImg += 1;
+  }
+  if(currentImg === 7){
+    nextBtn.setAttribute('disabled', 'true');
+  }
+}
+
+function prev(){
+  if(currentImg > 0){
+    nextBtn.removeAttribute('disabled')
+    positionValue += IMAGE_WIDTH;
+    innerEls.forEach((el)=>el.style.transform = `translateX(${positionValue}px)`)
+    currentImg -= 1;
+  }
+  if(currentImg === 0){
+    prevBtn.setAttribute('disabled', 'true');
+  }
+}
+
+function init(){
+  prevBtn.setAttribute('disabled', 'true')
+  prevBtn.addEventListener("click", prev)
+  nextBtn.addEventListener("click", next)
+}
+
+init();

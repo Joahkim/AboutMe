@@ -4,29 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@300;400;500&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">  <link rel="stylesheet" href="main.css">
   <script src="https://kit.fontawesome.com/4560e98ce8.js" crossorigin="anonymous"></script>
   <script defer src="./main.js"></script>
-  <title>자기소개김은경</title>
+  <title>자기소개김은경복사본</title>
 </head>
 <body>
   <!-- 그리드 -->
   <div id="wrapper">
     <!-- 박스1 -->
     <div class="box box1">
-      <div class="box1element">
-        <ul class="shortcut">
-          <li class="shortlist"><button class="list" id="toprofile" >Profile</button></li>
-          <li class="shortlist"><button class="list" id="tofavthings">Fav Things To Do</button></li>
-          <li class="shortlist"><button class="list" id="tombti">MBTI</button></li>
-          <li class="shortlist"><button class="list" id="tofunfacts">Fun Facts About Me</button></li>
-        </ul>
-      </div>
+      <!-- 원래 지름길 있 던 곳 -->
     </div>
     <!-- 박스2 -->
-    <!-- 다크모드와 라이트모드 -->
     <div class="box box2">
       <div>
+        <!-- 다크모드와 라이트모드 -->
         <input type="checkbox" class="checkbox" id="checkbox">
         <label for="checkbox" class="label">
           <i class="fa-solid fa-sun"></i>
@@ -34,110 +27,254 @@
           <div class="ball"></div>
         </label>
       </div>
+      <!-- 수정 후 지름길-->
+      <div class="box2element">
+        <ul class="shortcut">
+          <li class="shortlist"><button class="list" id="home">Home</a></li>
+          <div class="line"></div>
+          <li class="shortlist"><button class="list" id="toprofile" >Profile</button></li>
+          <li class="shortlist"><button class="list" id="tofavthings">Favorite Things</button></li>
+          <li class="shortlist"><button class="list" id="toexperience">Experiences</button></li>
+          <li class="shortlist"><button class="list" id="tofunfacts">Fun Facts About Me</button></li>
+          <li class="shortlist"><button class="list" id="contactinfo">Contact</button></li>          
+        </ul>
+      </div>
     </div>
     <!-- 박스3 -->
     <div class="box box3">
       <div class="gallery">
-        <!-- 첫 번째 페이지 -->
+        <!-- intro -->
         <div id="intro" class="part">
-          <div class="textmedal">
-            <div class="front">
-              <!-- 타이핑으로 내용은 js에 있음 -->
+          <div class="box_wrapper">
+            <!-- 타이핑으로 내용은 js에 있음 -->
               <h1 class="comment typing"></h1>
-            </div>
-            <!-- <div class="back">
-              <h1 class="comment">Welcome!<br>Scroll Down To Meet Me<br>↓</h1>
-            </div> -->
-          </div>      
+          </div>
         </div>
-        <!-- 두 번째 페이지 -->
+        <!-- profile -->
         <div id="profile" class="part">
-          <div>Profile</div>
-          <div class="selfpic">
-            <img src="./images/vancouver.JPG" alt="mypic"> 
-          </div>
-          <div>
-            <p>이름: 김은경</p>
-            <p>거주지 : 경기도 성남시</p>
-            <p>취향: <span>#커피 #운동 #여름 #바다 #산 #영화 #음악 #반려동물<span></p>
-            <p>관심분야: 프런트 엔드</p>
+          <div class="box_wrapper">
+            <div class="topic_wrapper">
+              <div class="topic">Profile</div>
+            </div>
+            <div class="profile_innerbox">
+              <div class="selfpic">
+                <img src="./images/profile2.png" alt="mypic"> 
+              </div>
+              <div class="profile_textbox">
+                <h2 style="font-family: 'Nanum Gothic', sans-serif;">웹에서 블럭을 쌓다</h2>
+                <div style="font-family: 'Nanum Gothic', sans-serif;">로봇, 인형 등 이미 완성된 장난감 대신 블럭을 만지작거리며 직접 장난감을 만들었던 어린 시절의 즐거움이 블럭에서 코딩으로 이어졌습니다. 코드는 웹에서 블럭 조각처럼 연결되어 쌓입니다. 내가 쌓은 블럭이 사용자에게 세상과 소통할 수 있는 연결고리를 제공한다면 프로그래밍은 충분히 매력적입니다.<br>그 시작을 wecode와 함께하고 싶습니다.  </div>
+              </div> 
+            </div>
           </div>
         </div>
-        <!-- 세 번째 페이지 -->
+        <!-- fav things -->
         <div id="fav" class="part">
-          <div>Favorite Things</div>
-          <div>
-            <ul class="favoriteicon">
-              <li class="hobbyicon"><i class="fa-solid fa-person-biking faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Working out</p></li>              
-              <li class="hobbyicon"><i class="fa-solid fa-clapperboard faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Watching Movie</p></li>
-              <li class="hobbyicon"><i class="fa-solid fa-headphones-simple faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Listening to music</p></li>
-              <li class="hobbyicon"><i class="fa-solid fa-kitchen-set faicon"></i><p style="margin-top: 15px; font-size: 15px; font-weight: bold;">Cooking</p></li>
-            </ul>
+          <div class="box_wrapper">
+            <div class="topic_wrapper">
+              <div class="topic">Favorite Things</div>
+            </div>
+            <div class="fav_innerbox">
+              <div class="img1">
+                <div class="imgitself"><img src="./images/coffee.jpg" alt=""></div>
+                <span class="caption">coffee</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/cook.jpg" alt=""></div>
+                <span class="caption">cooking</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/cycling.jpg" alt=""></div>
+                <span class="caption">cycling</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/hiking.jpg" alt=""></div>
+                <span class="caption">hiking</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/movie.jpg" alt=""></div>
+                <span class="caption">films</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/music.jpg" alt=""></div>
+                <span class="caption">music</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/planting.jpg" alt=""></div>
+                <span class="caption">plants</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/snorkling.jpg" alt=""></div>
+                <span class="caption">swimming</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/traveling.jpg" alt=""></div>
+                <span class="caption">traveling</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/poker.jpg" alt=""></div>
+                <span class="caption">poker</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/pizza.jpg" alt=""></div>
+                <span class="caption">pizza</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/leikeli.jpg" alt=""></div>
+                <span class="caption">leikeli47</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/jon.jpg" alt=""></div>
+                <span class="caption">Jon Bellion</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/interstella.jpg" alt=""></div>
+                <span class="caption">Interstella</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/harrypotter.jpeg" alt=""></div>
+                <span class="caption">Harry Potter</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/halligalii.jpg" alt=""></div>
+                <span class="caption">Hali Gali</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/evisbeats.jpg" alt=""></div>
+                <span class="caption">evisbeats</span>
+              </div>
+              <div class="img1">
+                <div class="imgitself"><img src="./images/dog.jpg" alt=""></div>
+                <span class="caption">animals</span>
+              </div> 
+            </div>
           </div>
         </div>
-        <!-- 네 번째 페이지 -->
-        <div id="mbti" class="part">
-          <div>MBTI</div>
-          <div class="enfj">
-            <div>E N F J<br><small style="font-size: 30px;">정의로운 사회운동가</small></div>
+
+        <!-- experiences -->
+        <div id="experience" class="part">
+          <div class="box_wrapper">
+            <div class="topic_wrapper">
+              <div class="topic">Experiences</div>
+            </div>
+            <div class="exp_innerbox">
+              <div class="container">
+                <div class="slides">
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/EASF.JPG" alt=""></div>
+                    <div class="article">인디애나 대학 스포츠 이벤트 주최<br><small>Hold Sports Festival in Indiana University</small></div>
+                  </div>
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/exchange.png" alt=""></div>
+                    <div class="article">교환학생 프로그램 중 해비타트 봉사활동<br>Habitat for Humanity during exchange student program in the states</div>
+                  </div>
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/sportsmarketing.JPG" alt=""></div>
+                    <div class="article">스포츠 이벤트를 통해 국내 스포츠 리그 홍보<br>Promote national sports leagues with sports event</div>
+                  </div>
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/graduate.JPG" alt=""></div>
+                    <div class="article">이화여자대학교 졸업<br>Graduated from Ewha Womans University</div>
+                  </div>
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/olympics.png" alt=""></div>
+                    <div class="article">2018평창 올림픽&패럴림픽 근무 경험<br>Worked at 2018 PyeongChang Olympics and Paralympics</div>
+                  </div>
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/travel.png" alt=""></div>
+                    <div class="article">걸어서 세계 속으로<br>explored the world with a backpack</div>
+                  </div>
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/project.JPG" alt=""></div>
+                    <div class="article">Project Aware 운동으로 바다 환경 지키기<br>Project Aware with PADI</div>
+                  </div>
+                  <div class="inner_el">
+                    <div class="fakeimage"><img src="./images/canada.jpg" alt=""></div>
+                    <div class="article">캐나다 워킹홀리데이<br>Working Holiday in Canada</div>
+                  </div>
+                </div>
+                <button class="prev"><i class="fa-solid fa-angles-left icon"></i></button>
+                <button class="next"><i class="fa-solid fa-angles-right icon"></i></button>
+              </div>
+            </div>
           </div>
-          <img src="./images/enfj.png" alt="enfj">
         </div>
-        <!-- 다섯 번째 페이지 -->
-        <div id="funfact1" class="part">
-          <div>Fun Facts About Me</div>
-          <i class="fa-brands fa-canadian-maple-leaf"></i>
-          <div>Guess The Fact!</div>
-          <ul class="questions">
-            <!-- 오답및 정답을 alert 창으로 알리기 -->
-            <li><button class="options wrong">1. My mother is Canadian</button></li>
-            <li><button class="options wrong">2. My father is Canadian</button></li>
-            <li><button class="options right" >3. I am a permanent resident of Canada</button></li>
-            <li><button class="options wrong">4. I have a bachelor's degree in Sports Sciences in Canada</button></li>
-          </ul>
+        <!-- fun facts -->
+        <div id="funfact" class="part">
+          <div class="box_wrapper">
+            <div class="topic_wrapper">
+              <div class="topic">Fun Facts About Me</div>
+              <div class="subtopic">Guess The Facts!</div>
+            </div>
+            <div class="funfact_innerbox">
+              <div class="questionbox">
+                <div class="iconbox">
+                  <i class="fa-brands fa-canadian-maple-leaf"></i>
+                </div>
+                <div class="question_list">
+                  <ul class="questions">
+                    <!-- 오답및 정답을 alert 창으로 알리기 -->
+                    <li><button class="options wrong">1. My brother-in-law is Canadian</button></li>
+                    <li><button class="options wrong">2. I've been to Toronto</button></li>
+                    <li><button class="options right" >3. I am a permanent resident of Canada</button></li>
+                    <li><button class="options wrong">4. My favorite color is red</button></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="middleline"></div>
+              <div class="questionbox">
+                <div class="iconbox">
+                  <i class="fa-solid fa-hand-peace"></i>
+                </div>
+                <div class="question_list">
+                  <ul class="questions">
+                    <!-- 오답및 정답을 alert 창으로 알리기 -->
+                    <li><button class="options wrong">1. I ran a full marathon few years ago</button></li>
+                    <li><button class="options right">2. I had plant-based diet for a year</button></li>
+                    <li><button class="options wrong">3. I'd lost 10kg in a month</button></li>
+                    <li><button class="options wrong">4. I am a certified chief</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- 여섯 번째 페이지 -->
-        <div id="funfact2" class="part">
-          <div>Fun Facts About Me</div>
-          <i class="fa-solid fa-hand-peace"></i>
-          <div>Guess The Fact!</div>
-          <ul class="questions2">
-            <!-- 오답및 정답을 alert 창으로 알리기 -->
-            <li><button class="options wrong">1. I'd done The Miracle Morning 30 Day Challenge</button></li>
-            <li><button class="options right">2. I had plant-based diet for a year</button></li>
-            <li><button class="options wrong">3. I've lost 15kg of my weight in a month</button></li>
-            <li><button class="options wrong">4. I have just finished master's degree in Nutritions</button></li>
-          </ul>
-        </div>
-        <!-- 일곱 번째 페이지 -->
+        <!-- contact -->
         <div id="thx" class="part">
-          <div>Thank you for visiting my <br>self-introduction page</div>
+          <div class="box_wrapper">
+            <div class="topic_wrapper">
+              <div class="topic">Contact</div>
+            </div>
+            <div class="contact_innerbox">
+              <h1 class="endingcomment">Thank You For Visiting<br/>Feel Free To Reach Out To Me!</h1>
+              <!-- 연락처 -->
+              <ul class="socialmedia">
+                <li class="contactme" id="github" title="to github">
+                  <a href="https://github.com/Joahkim" target="_blank" title="github"><i class="fa-brands fa-github icon"></i></a>
+                </li>
+                <li class="contactme" id="call" title="call this number">
+                  <a href="tel:01030324318"><i class="fa-solid fa-phone icon"></i></a>
+                </li>
+                <li class="contactme" id="email" title="send an email">
+                  <a href="mailto:kimek4319@gmail.com"><i class="fa-solid fa-envelope icon"></i></a>
+                </li>
+                <li class="contactme" id="blog" title="to Joah's blog">
+                  <a href="https://velog.io/@joahkim" target="_blank" title="velog"><i class="fa-solid fa-book icon"></i></a>
+                </li>
+              </ul>
+              <div class="totopbtn">
+                <button id="backtotopbtn">
+                  <i id="icontotop" class="fa-solid fa-angles-up icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- 갤러리마지막페이지 -->
-        <div id="final" class="part">
-          <div class="backtotop">GO BACK TO THE TOP</div>
-          <button id="backtotopbtn">
-            <i id="icontotop" class="fa-solid fa-angles-up"></i>
-          </button>
-        </div>
-      </div>
-      <div>
-        <!-- 연락처 stil in box3 -->
-        <ul class="socialmedia">
-          <li class="contactme" id="insta">
-            <a href="https://www.instagram.com/vvjoahvv/" target="_blank" title="@vvjoahvv"><i class="fa-brands fa-instagram icon"></i></a>
-          </li>
-          <li class="contactme" id="call" title="call this number">
-            <a href="tel:01030324318"><i class="fa-solid fa-phone icon"></i></a>
-          </li>
-          <li class="contactme" id="email" title="send an email">
-            <a href="mailto:kimek4319@gmail.com"><i class="fa-solid fa-envelope icon"></i></a>
-          </li>
-        </ul>
       </div>
     </div>
     <!-- 박스4 -->
     <div class="box box4"></div>
+    <!-- 박스5 -->
+    <div class="box box5"></div>
   </div>
 </body>
 </html>
